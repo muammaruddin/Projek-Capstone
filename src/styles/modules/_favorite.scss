@@ -1,0 +1,11 @@
+.fav-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+  }
+  
+  .pesan-favorite {
+    text-align: center;
+    font-style: italic;
+  }
+  

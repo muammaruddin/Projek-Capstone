@@ -9,7 +9,7 @@ import { alertError, alertSuccess } from "./sweetalert";
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, data }) {
     this._likeButtonContainer = likeButtonContainer;
-    this._restaurant = data.restaurant;
+    this._restaurant = data;
 
     await this._renderButton();
   },
@@ -34,7 +34,7 @@ const LikeButtonInitiator = {
   _addButtonEventListener(button, action) {
     button.addEventListener("click", async () => {
       await action();
-      this._renderButton();
+      await this._renderButton(); // Menunggu sampai tombol dirender kembali setelah tindakan dilakukan
     });
   },
 

@@ -6,10 +6,9 @@ const Favorite = {
     return `
     <section class="container">
       <div tabindex="0" class="container-title">
-        <h2>Favorite Wisata Lombok</h2>
+        <h2>Favorite Restaurant</h2>
       </div>
       <div class="fav-cards"></div>
-      <p tabindex="0" class="pesan-favorite">Tidak ada Wisata Favorit yang tersimpan. Tambahkan satu dengan mengklik tombol hati di halaman detail</p>
     </section>
     `;
   },

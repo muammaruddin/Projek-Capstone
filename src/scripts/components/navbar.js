@@ -20,7 +20,7 @@ class Navbar extends HTMLElement {
               <ul class="sidebar">
                   <li><a href="/">Home</a></li>
                   <li><a href="#/favorite">Favorite</a></li>
-                  <li><a href="https://www.instagram.com/asepsan999/?hl=en" target="_blank" rel="noopener noreferrer">Tim</a></li>
+                  <li><a href="rel="noopener noreferrer">Tim</a></li>
               </ul>
           </div>
       </nav>

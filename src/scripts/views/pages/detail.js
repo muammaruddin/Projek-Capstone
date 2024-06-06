@@ -13,7 +13,7 @@ const Detail = {
     return `
       <section class="container">
         <div tabindex="0" class="container-title">
-          <h2>Detail Restaurant</h2>
+          <h2>Detail Wisata</h2>
         </div>
         <div class="loading"></div> <!-- Tambahkan elemen loading -->
         <div class="like" id="likeButtonContainer"></div>
@@ -40,7 +40,7 @@ const Detail = {
         data,
       });
     } catch (error) {
-      console.error('Failed to fetch restaurant detail:', error);
+      console.error('Failed to fetch Wisata detail:', error);
       this._hideLoading();
       this._showMainContainer();
       this._displayErrorMessage(error.message);

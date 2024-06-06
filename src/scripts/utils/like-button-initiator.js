@@ -1,7 +1,10 @@
 /* eslint-disable no-underscore-dangle */
-import FavoriteRestoIdb from '../data/favorite-resto-idb';
-import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/templates/button-favorite';
-import { alertError, alertSuccess } from './sweetalert';
+import FavoriteRestoIdb from "../data/favorite-resto-idb";
+import {
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+} from "../views/templates/button-favorite";
+import { alertError, alertSuccess } from "./sweetalert";
 
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, data }) {
@@ -29,7 +32,7 @@ const LikeButtonInitiator = {
   },
 
   _addButtonEventListener(button, action) {
-    button.addEventListener('click', async () => {
+    button.addEventListener("click", async () => {
       await action();
       this._renderButton();
     });
@@ -37,19 +40,19 @@ const LikeButtonInitiator = {
 
   _renderLikeButtonTemplate() {
     this._likeButtonContainer.innerHTML = createLikeButtonTemplate();
-    const likeButton = document.querySelector('#likeButton');
+    const likeButton = document.querySelector("#likeButton");
     this._addButtonEventListener(likeButton, async () => {
       await FavoriteRestoIdb.putResto(this._restaurant);
-      alertSuccess('Resto favorited!');
+      alertSuccess("Wisata favorited!");
     });
   },
 
   _renderLikedButtonTemplate() {
     this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
-    const likeButton = document.querySelector('#likeButton');
+    const likeButton = document.querySelector("#likeButton");
     this._addButtonEventListener(likeButton, async () => {
       await FavoriteRestoIdb.deleteResto(this._restaurant.id);
-      alertSuccess('Resto unfavorited!');
+      alertSuccess("Wisata unfavorited!");
     });
   },
 };

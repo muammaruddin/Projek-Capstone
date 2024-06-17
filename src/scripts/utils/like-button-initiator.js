@@ -1,10 +1,10 @@
 /* eslint-disable no-underscore-dangle */
-import FavoriteRestoIdb from "../data/favorite-resto-idb";
+import FavoriteRestoIdb from '../data/favorite-wisata-idb';
 import {
   createLikeButtonTemplate,
   createLikedButtonTemplate,
-} from "../views/templates/button-favorite";
-import { alertError, alertSuccess } from "./sweetalert";
+} from '../views/templates/button-favorite';
+import { alertError, alertSuccess } from './sweetalert';
 
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, data }) {
@@ -32,27 +32,28 @@ const LikeButtonInitiator = {
   },
 
   _addButtonEventListener(button, action) {
-    button.addEventListener("click", async () => {
+    button.addEventListener('click', async () => {
       await action();
+      // eslint-disable-next-line max-len
       await this._renderButton(); // Menunggu sampai tombol dirender kembali setelah tindakan dilakukan
     });
   },
 
   _renderLikeButtonTemplate() {
     this._likeButtonContainer.innerHTML = createLikeButtonTemplate();
-    const likeButton = document.querySelector("#likeButton");
+    const likeButton = document.querySelector('#likeButton');
     this._addButtonEventListener(likeButton, async () => {
       await FavoriteRestoIdb.putResto(this._restaurant);
-      alertSuccess("Wisata favorited!");
+      alertSuccess('Wisata favorited!');
     });
   },
 
   _renderLikedButtonTemplate() {
     this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
-    const likeButton = document.querySelector("#likeButton");
+    const likeButton = document.querySelector('#likeButton');
     this._addButtonEventListener(likeButton, async () => {
       await FavoriteRestoIdb.deleteResto(this._restaurant.id);
-      alertSuccess("Wisata unfavorited!");
+      alertSuccess('Wisata unfavorited!');
     });
   },
 };

@@ -9,6 +9,7 @@
 		padding: 1em 0 0 0;
 		font-weight: bold;
 		position: relative;
+		color: $secondary-color;
 	}
 	.rating-detail {
 		padding: 0.3em 1em;
@@ -37,8 +38,8 @@
 .detail-img {
   min-width: 95%;
 	width: 100%;
-	height: 370px;
-	object-fit: cover;
+	height: 500px;
+	object-fit: fill;
 	object-position: center;
 	border-radius: 10px;
 	border: 1px solid $shadow-color;
@@ -52,10 +53,12 @@
 		margin-bottom: 10px;
 		display: block;
 		margin-top: 5px;
+		color: $light-color;
 	}
 	p {
 		display: block;
 		margin-top: 5px;
+		color: $light-color;
 	}
 }
 .garis-bawah {
@@ -83,7 +86,7 @@
 		font-weight: bold;
 		font-size: 1.37em;
 		padding: 1em;
-		color: $primary-color;
+		color: $light-color;
 	}
 }
 .detail-food {
@@ -114,78 +117,7 @@
 		}
 	}
 }
-.detail-review {
-  min-width: 95%;
-	max-width: 100%;
-	font-size: 1em;
-	text-align: center;
-}
-.detail-review-item {
-	padding: 15px 20px;
-	margin-bottom: 10px;
-	background-color: $light-color-list;
-	border-radius: 5px;
-	box-shadow: 0px 2px 5px $shadow-color-dua;
-	transition: all 0.3s ease;
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0px 4px 10px $shadow-color-tiga;
-	}
-	&:last-child {
-		margin-bottom: 0;
-	}
-	.review-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1em 1em;
-		color: $primary-color;
-		border-bottom: 1px solid $dark-color;
-		.review-name {
-			font-weight: bold;
-			display: flex;
-			align-items: center;
-		}
-		.review-date {
-			font-size: 0.8em;
-			font-weight: lighter;
-		}
-	}
-	.review-body {
-		padding: 1em;
-		text-align: left;
-	}
-}
-#contact{
-  min-width: 95%;
-}
-.review[type=text] {
-	width: 100%;
-	padding: 16px;
-	border: 1px solid $border-input;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: vertical;
-	min-width: $min-size;
-	min-height: $min-size;
-}
-.review[type=submit] {
-	background-color: $btn-color-review;
-	color: $light-color;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	min-width: $min-size;
-  	min-height: $min-size;
-}
-.review[type="submit"] {
-	&:hover {
-		background-color: $btn-color-review-hover;
-	}
-}
+
 // tombol like
 .like {
 	background-color: $secondary-color;

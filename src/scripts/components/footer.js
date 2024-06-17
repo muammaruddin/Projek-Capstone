@@ -6,7 +6,7 @@ class HeroContent extends HTMLElement {
   render() {
     this.innerHTML = `
       <footer tabindex="0">
-      <p>Projekt plant &#169; 2024 - Wisata</p>
+      <p>Projekt Capstone &#169; 2024 - Destination Lombok Wonders</p>
       </footer>
       `;
   }

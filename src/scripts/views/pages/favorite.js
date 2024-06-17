@@ -1,14 +1,15 @@
-import FavoriteRestoIdb from '../../data/favorite-resto-idb';
-import restoCard from '../templates/resto-card';
+import FavoriteRestoIdb from '../../data/favorite-wisata-idb';
+import restoCard from '../templates/wisata-card';
 
 const Favorite = {
   async render() {
     return `
     <section class="container">
       <div tabindex="0" class="container-title">
-        <h2>Favorite Restaurant</h2>
+        <h2>Favorite Destination</h2>
       </div>
       <div class="fav-cards"></div>
+      <p class="pesan-favorite" style="display: none;">No favorite Destination found.</p>
     </section>
     `;
   },
@@ -19,16 +20,19 @@ const Favorite = {
 
     const favoriteContainer = document.querySelector('.fav-cards');
 
-    if (data.length > 0) {
+    if (data && data.length > 0) {
       // Jika ada data, tampilkan semua kartu restoran favorit
       data.forEach((resto) => {
-        favoriteContainer.innerHTML += restoCard(resto);
+        if (resto && resto.attributes) {
+          favoriteContainer.innerHTML += restoCard(resto);
+        }
       });
-      // Sembunyikan pesan favorite jika ada data
-      document.querySelector('.pesan-favorite').style.display = 'none';
     } else {
       // Tampilkan pesan favorite jika tidak ada data
-      document.querySelector('.pesan-favorite').style.display = 'block';
+      const pesanFavorite = document.querySelector('.pesan-favorite');
+      if (pesanFavorite) {
+        pesanFavorite.style.display = 'block';
+      }
     }
   },
 };

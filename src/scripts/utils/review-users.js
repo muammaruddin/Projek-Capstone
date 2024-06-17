@@ -1,4 +1,4 @@
-import RestaurantSource from '../data/resource-resto';
+import RestaurantSource from '../data/resource-wisata';
 
 const reviewUsers = async (url, name, review) => {
   const dataInput = {

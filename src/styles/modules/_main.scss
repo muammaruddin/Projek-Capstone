@@ -1,5 +1,9 @@
 /* explore */
-@import 'root';
+@import "root";
+body {
+  background-color: #10141b;
+}
+
 main {
   width: 100%;
   margin: 0 auto;
@@ -9,15 +13,18 @@ main {
   margin: 2em 5%;
   padding: 1em;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px $shadow-color;
+  background-color: $primary-color;
+  box-shadow: 0px 0px 10px 0px $secondary-color;
 }
 
 .container-title h2 {
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.6rem;
+  margin-top: 1rem;
+  color: $secondary-color;
   font-family: $quicksand-font;
 }
-.error{
+.error {
   text-align: center;
   color: $err;
   font-weight: bold;
@@ -30,9 +37,9 @@ main {
 }
 
 .card {
-  background-color: $light-color;
+  background-color: $primary-color;
   text-align: center;
-  border: 1px solid $five-color;
+  border: 1px solid $secondary-color;
   border-radius: 3px;
   box-shadow: 0 0 2px $shadow-color-card;
   position: relative;
@@ -47,8 +54,13 @@ main {
   padding: 15px;
 }
 
-.title-city {
+.title {
   font-weight: bold;
+  color: $secondary-color;
+}
+
+.title-city {
+  font-weight: 300;
 }
 
 .description {
@@ -157,6 +169,6 @@ main {
   min-width: $min-size;
   min-height: $min-size;
 }
-.contact-form-btn:hover{
+.contact-form-btn:hover {
   background-color: $hover-btn-satu;
 }

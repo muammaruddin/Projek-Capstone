@@ -60,38 +60,38 @@ module.exports = {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: /^https:\/\/restaurant-api\.dicoding\.dev\/list/,
+          urlPattern: /^https:\/\/destination-api\.dicoding\.dev\/list/,
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'restaurant-list-cache',
+            cacheName: 'destination-list-cache',
           },
         },
         {
-          urlPattern: /^https:\/\/restaurant-api\.dicoding\.dev\/detail/,
+          urlPattern: /^https:\/\/destination-api\.dicoding\.dev\/detail/,
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'restaurant-detail-cache',
+            cacheName: 'destination-detail-cache',
           },
         },
         {
-          urlPattern: /^https:\/\/restaurant-api\.dicoding\.dev\/search/,
+          urlPattern: /^https:\/\/destination-api\.dicoding\.dev\/search/,
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'restaurant-search-cache',
+            cacheName: 'destination-search-cache',
           },
         },
         {
-          urlPattern: /^https:\/\/restaurant-api\.dicoding\.dev\/review/,
+          urlPattern: /^https:\/\/destination-api\.dicoding\.dev\/review/,
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'restaurant-review-cache',
+            cacheName: 'destination-review-cache',
           },
         },
         {
-          urlPattern: /^https:\/\/restaurant-api\.dicoding\.dev\/images/,
+          urlPattern: /^https:\/\/destination-api\.dicoding\.dev\/images/,
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'restaurant-image-cache',
+            cacheName: 'destination-image-cache',
           },
         },
       ],

@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
       <nav>
           <div class="container-flex">
               <div class="brand">
-                  <a href="/">Destination</a>
+                  <a href="#/home">Destination</a>
               </div>
               <button class="burger" aria-label="menu dropdown">
                   <div class="bar1"></div>
@@ -18,9 +18,9 @@ class Navbar extends HTMLElement {
               </button>
               <div class="bg-sidebar"></div>
               <ul class="sidebar">
-                  <li><a href="/">Home</a></li>
+                  <li><a href="#/home">Home</a></li>
                   <li><a href="#/favorite">Favorite</a></li>
-                  <li><a href="rel="noopener noreferrer">Tim</a></li>
+                  <li><a href="#/tim">Tim</a></li>
               </ul>
           </div>
       </nav>

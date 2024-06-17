@@ -9,9 +9,9 @@
         "sourceType": "module"
     },
     "rules": {
-        "indent": ["error", 2], // Aturan indentasi 2 spasi
-        "quotes": ["error", "single"], // Menggunakan tanda kutip tunggal
-        "semi": ["error", "always"], // Selalu gunakan titik koma di akhir statement
+        "indent": ["error", 2],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
         "no-console": "off",
         "linebreak-style": "off"
     }
